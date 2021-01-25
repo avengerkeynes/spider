@@ -73,14 +73,14 @@ public class Main {
             InputStream inputStreamxml=new ByteArrayInputStream(text.getBytes(StandardCharsets.UTF_8));
             DocumentBuilder db=dbf.newDocumentBuilder();
             doc=db.parse(inputStreamxml);
-//            XPathFactory factory=XPathFactory.newInstance();
-//            xPath=factory.newXPath();
+            XPathFactory factory=XPathFactory.newInstance();
+            xPath=factory.newXPath();
 
-//            NodeList nodeList=(NodeList) xPath.evaluate("//*[name()='InstanceName']",doc, XPathConstants.NODESET);
-//            for(int i=0;i<nodeList.getLength();i++)
-//            {
-//                System.out.println(nodeList.item(i).getNodeName()+"-->"+nodeList.item(i).getTextContent());
-//            }
+            NodeList nodeList=(NodeList) xPath.evaluate("//*[name()='InstanceName']",doc, XPathConstants.NODESET);
+            for(int i=0;i<nodeList.getLength();i++)
+            {
+                System.out.println(nodeList.item(i).getNodeName()+"-->"+nodeList.item(i).getTextContent());
+            }
 
             //打印根节点下所有元素节点
             System.out.println(doc.getDocumentElement().getChildNodes().getLength());
