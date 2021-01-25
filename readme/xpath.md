@@ -32,3 +32,13 @@
 @*|匹配任何属性节点
 node()|匹配任何类型的节点
 \||选取若干路径
+
+#### 使用示例
+路径表达式|结果
+--:|:--
+/bookstore/*|选取bookstore元素的所有子节点
+//*|选取文档中的所有元素
+//title[@*]|选取所有带有属性的title元素
+//book/title\|//book/price|选取所有book元素的title和price元素
+//title\|//price|选取所有文档中的title和price元素
+/bookstore/book/title\|//price|选取所有属于bookstore元素的book元素的title元素
