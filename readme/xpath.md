@@ -26,3 +26,9 @@
 /bookstore/book[price>35]/title|选取所有bookstore元素中book元素的title元素且price值大于35
 
 #### 通配符
+通配符|描述
+--:|:--
+*|匹配任何元素节点
+@*|匹配任何属性节点
+node()|匹配任何类型的节点
+\||选取若干路径
